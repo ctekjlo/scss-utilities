@@ -2,6 +2,7 @@
 
 ### Retina Sprites (_retina.scss)
 
+```scss
     $sprites: sprite-map("sprites/*.png", $spacing: 40px); // $layout: diagonal;
     $sprites2x: sprite-map("sprites-retina/*.png", $spacing: 80px); // $layout: diagonal;
 
