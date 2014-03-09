@@ -1,18 +1,28 @@
-// @include _image-optimize();
+// @include image-optimize();
 // https://developer.mozilla.org/en-US/docs/Web/CSS/image-rendering
 @mixin image-optimize () {
-
-    image-rendering: optimizeSpeed;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: -o-crisp-edges;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    -ms-interpolation-mode: bicubic;
-
+  image-rendering: optimizeSpeed;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: bicubic;
 }
 
 .image-optimize {
+  @include image-optimize();
+}
 
-    @include image-optimize();
-
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  // IE 6/7 fallback
+  *text-indent: -9999px;
+  &:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+  }
 }
