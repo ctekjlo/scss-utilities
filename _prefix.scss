@@ -1,4 +1,5 @@
 // prefixer
+// @include prefix(box-shadow, 1px);
 @mixin prefix ($property, $value) {
-    @include experimental($property, $value);
+  @include experimental($property, $value);
 }
